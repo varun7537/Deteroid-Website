@@ -5,17 +5,17 @@ import { LIGHT_BG_COLORS } from "../../styles/tokens";
 const ACCENT_CLR = {
   o: {
     stroke:  LIGHT_BG_COLORS.emberorange,
-    iconBg:  "rgba(251,133,0,0.09)",    
-    barEnd:  LIGHT_BG_COLORS.solargold,                    
+    iconBg:  "rgba(251,133,0,0.09)",
+    barEnd:  LIGHT_BG_COLORS.solargold,
   },
   t: {
     stroke:  LIGHT_BG_COLORS.evergreenteal,
-    iconBg:  LIGHT_BG_COLORS.bg3,                         
+    iconBg:  LIGHT_BG_COLORS.bg3,
     barEnd:  LIGHT_BG_COLORS.evergreenteal,
   },
   v: {
     stroke:  LIGHT_BG_COLORS.araticcyan,
-    iconBg:  "rgba(33,158,188,0.09)",        
+    iconBg:  "rgba(33,158,188,0.09)",
     barEnd:  LIGHT_BG_COLORS.araticcyan,
   },
 };
@@ -77,6 +77,76 @@ const TRUST_CARDS = [
   },
 ];
 
+/* ── Responsive CSS injected once ── */
+const TRUST_CSS = `
+.trust-section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.trust-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: ${LIGHT_BG_COLORS.border};
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid ${LIGHT_BG_COLORS.border};
+  box-shadow: 0 8px 40px rgba(2,48,71,0.07), 0 2px 8px rgba(2,48,71,0.04);
+}
+
+.trust-card-inner {
+  background: ${LIGHT_BG_COLORS.bglt};
+  padding: 44px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+.trust-card-inner:hover {
+  background: ${LIGHT_BG_COLORS.bg2};
+  box-shadow: 0 12px 40px rgba(2,48,71,0.08), 0 2px 8px rgba(2,48,71,0.04);
+}
+
+.trust-heading {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* ── 1024px: 2 columns ── */
+@media (max-width: 1024px) {
+  .trust-section-inner { padding: 0 36px; }
+  .trust-cards-grid    { grid-template-columns: repeat(2, 1fr); }
+  .trust-heading       { margin-bottom: 56px; }
+}
+
+/* ── 768px: tighten card padding ── */
+@media (max-width: 768px) {
+  .trust-section-inner { padding: 0 24px; }
+  .trust-card-inner    { padding: 32px 24px; }
+  .trust-heading       { margin-bottom: 48px; }
+}
+
+/* ── 640px: single column ── */
+@media (max-width: 640px) {
+  .trust-cards-grid    { grid-template-columns: 1fr; border-radius: 16px; }
+  .trust-section-inner { padding: 0 16px; }
+  .trust-card-inner    { padding: 28px 20px; }
+  .trust-heading       { margin-bottom: 40px; }
+  .trust-section       { padding: 80px 0 !important; }
+}
+
+/* ── 380px: very small ── */
+@media (max-width: 380px) {
+  .trust-section-inner { padding: 0 12px; }
+  .trust-card-inner    { padding: 24px 16px; }
+  .trust-section       { padding: 64px 0 !important; }
+}
+`;
+
+let trustCssInjected = false;
 
 function TrustCard({ accent, title, body, icon }) {
   const [hov, setHov] = useState(false);
@@ -86,26 +156,19 @@ function TrustCard({ accent, title, body, icon }) {
   return (
     <div
       ref={ref}
+      className="trust-card-inner"
       style={{
-        background: hov ? LIGHT_BG_COLORS.bg2 : LIGHT_BG_COLORS.bglt,
-        padding: "44px 36px",
-        position: "relative",
-        overflow: "hidden",
-        transition: "background 0.35s ease, box-shadow 0.35s ease",
         opacity:   visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(30px)",
-        boxShadow: hov
-          ? "0 12px 40px rgba(2,48,71,0.08), 0 2px 8px rgba(2,48,71,0.04)"
-          : "none",
+        transition: "background 0.35s ease, box-shadow 0.35s ease, opacity 0.6s ease, transform 0.6s ease",
       }}
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
     >
+      {/* Top accent bar */}
       <div
         style={{
-          position: "absolute",
-          top: 0, left: 0, right: 0,
-          height: 2,
+          position: "absolute", top: 0, left: 0, right: 0, height: 2,
           background: `linear-gradient(90deg, ${LIGHT_BG_COLORS.emberorange}, ${barEnd})`,
           transform: hov ? "scaleX(1)" : "scaleX(0)",
           transition: "transform 0.4s cubic-bezier(0.4,0,0.2,1)",
@@ -113,33 +176,19 @@ function TrustCard({ accent, title, body, icon }) {
         }}
       />
 
-
+      {/* Icon */}
       <div
         style={{
-          width: 48,
-          height: 48,
-          borderRadius: 14,
+          width: 48, height: 48, borderRadius: 14,
           background: iconBg,
           border: `1px solid ${hov ? stroke + "30" : LIGHT_BG_COLORS.border}`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          display: "flex", alignItems: "center", justifyContent: "center",
           marginBottom: 24,
           transform: hov ? "scale(1.08) rotate(-4deg)" : "none",
           transition: "transform 0.3s ease, border-color 0.3s ease",
         }}
       >
-        <svg
-          viewBox="0 0 24 24"
-          style={{
-            width: 22, height: 22,
-            stroke: stroke,
-            strokeWidth: 2,
-            fill: "none",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-          }}
-        >
+        <svg viewBox="0 0 24 24" style={{ width: 22, height: 22, stroke, strokeWidth: 2, fill: "none", strokeLinecap: "round", strokeLinejoin: "round" }}>
           {icon}
         </svg>
       </div>
@@ -147,11 +196,9 @@ function TrustCard({ accent, title, body, icon }) {
       <h3
         style={{
           fontFamily: LIGHT_BG_COLORS.syne,
-          fontSize: 17,
-          fontWeight: 700,
+          fontSize: 17, fontWeight: 700,
           color: LIGHT_BG_COLORS.txt1,
-          lineHeight: 1.3,
-          marginBottom: 10,
+          lineHeight: 1.3, marginBottom: 10,
         }}
       >
         {title}
@@ -160,22 +207,18 @@ function TrustCard({ accent, title, body, icon }) {
       <p
         style={{
           fontFamily: LIGHT_BG_COLORS.body,
-          fontSize: 14.5,
-          lineHeight: 1.7,
+          fontSize: 14.5, lineHeight: 1.7,
           color: LIGHT_BG_COLORS.txt2,
         }}
       >
         {body}
       </p>
 
+      {/* Corner dot */}
       <div
         style={{
-          position: "absolute",
-          bottom: 20,
-          right: 24,
-          width: 6,
-          height: 6,
-          borderRadius: "50%",
+          position: "absolute", bottom: 20, right: 24,
+          width: 6, height: 6, borderRadius: "50%",
           background: stroke,
           opacity: hov ? 0.35 : 0.12,
           transition: "opacity 0.3s ease",
@@ -188,9 +231,18 @@ function TrustCard({ accent, title, body, icon }) {
 function Trust() {
   const [ref, visible] = useReveal();
 
+  // Inject CSS once
+  if (!trustCssInjected && typeof document !== "undefined") {
+    const style = document.createElement("style");
+    style.textContent = TRUST_CSS;
+    document.head.appendChild(style);
+    trustCssInjected = true;
+  }
+
   return (
     <section
       id="trust"
+      className="trust-section"
       style={{
         background: LIGHT_BG_COLORS.bg1,
         padding: "120px 0",
@@ -198,46 +250,31 @@ function Trust() {
         overflow: "hidden",
       }}
     >
-
+      {/* Blobs */}
       <div
         style={{
-          position: "absolute",
-          top: -80, right: -60,
-          width: 400, height: 400,
-          borderRadius: "50%",
+          position: "absolute", top: -80, right: -60,
+          width: 400, height: 400, borderRadius: "50%",
           background: "rgba(33,158,188,0.05)",
-          filter: "blur(80px)",
-          pointerEvents: "none",
+          filter: "blur(80px)", pointerEvents: "none",
         }}
       />
-
       <div
         style={{
-          position: "absolute",
-          bottom: -60, left: -40,
-          width: 320, height: 320,
-          borderRadius: "50%",
+          position: "absolute", bottom: -60, left: -40,
+          width: 320, height: 320, borderRadius: "50%",
           background: "rgba(64,138,113,0.05)",
-          filter: "blur(70px)",
-          pointerEvents: "none",
+          filter: "blur(70px)", pointerEvents: "none",
         }}
       />
 
-      <div
-        style={{
-          maxWidth: 1280,
-          margin: "0 auto",
-          padding: "0 56px",
-          position: "relative",
-          zIndex: 1,
-        }}
-      >
+      <div className="trust-section-inner">
 
+        {/* Header */}
         <div
           ref={ref}
+          className="trust-heading"
           style={{
-            textAlign: "center",
-            marginBottom: 80,
             opacity:   visible ? 1 : 0,
             transform: visible ? "none" : "translateY(30px)",
             transition: "all 0.75s cubic-bezier(0.16,1,0.3,1)",
@@ -246,29 +283,23 @@ function Trust() {
           <span
             style={{
               fontFamily: LIGHT_BG_COLORS.syne,
-              fontSize: 11,
-              fontWeight: 700,
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
+              fontSize: 11, fontWeight: 700,
+              letterSpacing: "0.18em", textTransform: "uppercase",
               color: LIGHT_BG_COLORS.emberorange,
-              display: "block",
-              marginBottom: 20,
+              display: "block", marginBottom: 20,
             }}
           >
             Why teams choose Deteroid
           </span>
 
-
           <h2
             style={{
               fontFamily: LIGHT_BG_COLORS.syne,
-              fontSize: "clamp(36px, 4.5vw, 60px)",
-              fontWeight: 700,
-              lineHeight: 1,
+              fontSize: "clamp(32px, 4.5vw, 60px)",
+              fontWeight: 700, lineHeight: 1,
               letterSpacing: "-0.03em",
               color: LIGHT_BG_COLORS.txt1,
-              maxWidth: 520,
-              margin: "0 auto 20px",
+              maxWidth: 520, margin: "0 auto 20px",
             }}
           >
             Built for{" "}
@@ -280,11 +311,9 @@ function Trust() {
           <p
             style={{
               fontFamily: LIGHT_BG_COLORS.body,
-              fontSize: 15,
-              fontWeight: 400,
+              fontSize: 15, fontWeight: 400,
               color: LIGHT_BG_COLORS.txt3,
-              maxWidth: 420,
-              margin: "0 auto",
+              maxWidth: 420, margin: "0 auto",
               lineHeight: 1.65,
             }}
           >
@@ -295,18 +324,8 @@ function Trust() {
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 2,
-            background: LIGHT_BG_COLORS.border,
-            borderRadius: 20,
-            overflow: "hidden",
-            border: `1.5px solid ${LIGHT_BG_COLORS.border}`,
-            boxShadow: "0 8px 40px rgba(2,48,71,0.07), 0 2px 8px rgba(2,48,71,0.04)",
-          }}
-        >
+        {/* Cards grid */}
+        <div className="trust-cards-grid">
           {TRUST_CARDS.map((card) => (
             <TrustCard key={card.title} {...card} />
           ))}
