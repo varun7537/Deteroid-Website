@@ -1,0 +1,14 @@
+export { GlobalStyles } from "./GlobalStyles";
+export { Cursor }      from "./Cursor";
+export { Navbar }      from "./Navbar";
+export { Hero }        from "./Hero";
+export { Marquee }     from "./Marquee";
+export { Mission }     from "./Mission";
+export { Values }      from "./Values";
+export { Story }       from "./Story";
+export { Team }        from "./Team";
+export { Approach }    from "./Approach";
+export { CTA }         from "./CTA";
+export { Footer }      from "./Footer";
+export { Reveal }      from "./Reveal";
+export { StatCard }    from "./StatCard";
