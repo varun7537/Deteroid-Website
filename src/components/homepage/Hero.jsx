@@ -1,14 +1,15 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
 
 const F = {
-  display: "'Syne', sans-serif",
+  display: "'Outfit', sans-serif",
   body:    "'DM Sans', sans-serif",
   mono:    "'Fira Code', 'DM Mono', 'Courier New', monospace",
 };
 
 const GLOBAL_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -45,7 +46,7 @@ const GLOBAL_CSS = `
   right: -20px;
   top: 50%;
   transform: translateY(calc(-50% + var(--ghost-y, 0px)));
-  font-family: 'Syne', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(80px, 17vw, 260px);
   font-weight: 800;
   line-height: 1;

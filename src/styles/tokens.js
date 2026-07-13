@@ -119,7 +119,7 @@ export const LIGHT_BG_COLORS = {
   emberorange:    "#FB8500",
   evergreenteal:   "#408A71",
 
-  syne: "'Syne', sans-serif",
+  outfit: "'Outfit', sans-serif",
   mono: "'Fira Code', monospace",
   body: "'DM Sans', sans-serif"  
 }
@@ -133,7 +133,7 @@ export const NAV_LINKS = [
 ]
 
 // Typography
-export const FONT = "'Syne', sans-serif";
+export const FONT = "'Outfit', sans-serif";
 
 const HERO_STATS = [
   {

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { useReveal } from "../../hooks/useReveal";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
@@ -85,7 +86,7 @@ const ROW_THEMES = [
 ];
 
 const FEATURES_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fira+Code:wght@400;500&display=swap');
 
 @keyframes blink {
   0%,100% { opacity:1; }
@@ -149,7 +150,7 @@ const FEATURES_CSS = `
   gap: 8px;
   font-size: 13px;
   font-weight: 700;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   text-decoration: none;
@@ -256,10 +257,10 @@ function MockupShell({ title, badge, badgeVariant = "t", children, dark = false 
       style={{ background: shellBg }}
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 22, gap: 12 }}>
-        <span style={{ fontFamily: LIGHT_BG_COLORS.syne, fontSize: 13, fontWeight: 700, color: titleClr, letterSpacing: "0.02em" }}>
+        <span style={{ fontFamily: LIGHT_BG_COLORS.outfit, fontSize: 13, fontWeight: 700, color: titleClr, letterSpacing: "0.02em" }}>
           {title}
         </span>
-        <span style={{ fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 50, background: bg, color: clr, letterSpacing: "0.05em", fontFamily: LIGHT_BG_COLORS.syne, whiteSpace: "nowrap", flexShrink: 0 }}>
+        <span style={{ fontSize: 11, fontWeight: 700, padding: "4px 12px", borderRadius: 50, background: bg, color: clr, letterSpacing: "0.05em", fontFamily: LIGHT_BG_COLORS.outfit, whiteSpace: "nowrap", flexShrink: 0 }}>
           {badge}
         </span>
       </div>
@@ -280,7 +281,7 @@ function ConversionMockup() {
         ].map(([lbl, val, delta, dClr]) => (
           <div key={lbl} style={{ background: LIGHT_BG_COLORS.bg2, borderRadius: 10, padding: "12px 10px", border: `1px solid ${LIGHT_BG_COLORS.border}` }}>
             <div style={{ fontSize: 11, color: LIGHT_BG_COLORS.txt3, marginBottom: 5, fontWeight: 500, fontFamily: LIGHT_BG_COLORS.body }}>{lbl}</div>
-            <div style={{ fontFamily: LIGHT_BG_COLORS.syne, fontSize: 20, fontWeight: 800, color: LIGHT_BG_COLORS.txt1 }}>{val}</div>
+            <div style={{ fontFamily: LIGHT_BG_COLORS.outfit, fontSize: 20, fontWeight: 800, color: LIGHT_BG_COLORS.txt1 }}>{val}</div>
             <div style={{ fontSize: 11, color: dClr, fontWeight: 700, marginTop: 2 }}>{delta}</div>
           </div>
         ))}
@@ -309,7 +310,7 @@ function AIMockup() {
 
         {/* User 1 */}
         <div style={{ display: "flex", gap: 9, alignItems: "flex-start" }}>
-          <div style={{ width: 26, height: 26, borderRadius: 8, background: "rgba(255,255,255,0.08)", color: LIGHT_BG_COLORS.dkMute, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, fontFamily: LIGHT_BG_COLORS.syne, flexShrink: 0 }}>U</div>
+          <div style={{ width: 26, height: 26, borderRadius: 8, background: "rgba(255,255,255,0.08)", color: LIGHT_BG_COLORS.dkMute, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, fontFamily: LIGHT_BG_COLORS.outfit, flexShrink: 0 }}>U</div>
           <div style={{ fontSize: 12.5, lineHeight: 1.6, color: LIGHT_BG_COLORS.dkBody, background: bubbleBg, padding: "9px 13px", borderRadius: 8, border: `1px solid ${bubbleBdr}`, fontFamily: LIGHT_BG_COLORS.body }}>
             Add CSRF protection to this form component
           </div>
@@ -317,7 +318,7 @@ function AIMockup() {
 
         {/* AI response */}
         <div style={{ display: "flex", gap: 9, alignItems: "flex-start" }}>
-          <div style={{ width: 26, height: 26, borderRadius: 8, background: "rgba(33,158,188,0.20)", color: LIGHT_BG_COLORS.araticcyan, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, fontFamily: LIGHT_BG_COLORS.syne, flexShrink: 0 }}>AI</div>
+          <div style={{ width: 26, height: 26, borderRadius: 8, background: "rgba(33,158,188,0.20)", color: LIGHT_BG_COLORS.araticcyan, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, fontFamily: LIGHT_BG_COLORS.outfit, flexShrink: 0 }}>AI</div>
           <div style={{ fontSize: 12.5, lineHeight: 1.6, color: LIGHT_BG_COLORS.dkBody, background: bubbleBg, padding: "9px 13px", borderRadius: 8, border: `1px solid ${bubbleBdr}`, flex: 1, fontFamily: LIGHT_BG_COLORS.body }}>
             Sure — here's the secure version with token validation:
             <div style={{ background: "rgba(0,0,0,0.38)", borderRadius: 8, padding: "10px 12px", fontFamily: LIGHT_BG_COLORS.mono, fontSize: 11, color: "#B0E4CC", marginTop: 8, lineHeight: 1.75, border: `1px solid ${bubbleBdr}` }}>
@@ -333,7 +334,7 @@ function AIMockup() {
 
         {/* User 2 with cursor */}
         <div style={{ display: "flex", gap: 9, alignItems: "flex-start" }}>
-          <div style={{ width: 26, height: 26, borderRadius: 8, background: "rgba(255,255,255,0.08)", color: LIGHT_BG_COLORS.dkMute, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, fontFamily: LIGHT_BG_COLORS.syne, flexShrink: 0 }}>U</div>
+          <div style={{ width: 26, height: 26, borderRadius: 8, background: "rgba(255,255,255,0.08)", color: LIGHT_BG_COLORS.dkMute, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, fontFamily: LIGHT_BG_COLORS.outfit, flexShrink: 0 }}>U</div>
           <div style={{ fontSize: 12.5, lineHeight: 1.6, color: LIGHT_BG_COLORS.dkBody, background: bubbleBg, padding: "9px 13px", borderRadius: 8, border: `1px solid ${bubbleBdr}`, fontFamily: LIGHT_BG_COLORS.body }}>
             Also add rate limiting
             <span style={{ display: "inline-block", width: 2, height: 12, background: LIGHT_BG_COLORS.araticcyan, verticalAlign: "middle", marginLeft: 2, animation: "blink 1.1s step-end infinite" }} />
@@ -393,7 +394,7 @@ function SecurityMockup() {
             </span>
             <span style={{
               fontSize: 10, fontWeight: 700, padding: "3px 10px", borderRadius: 50,
-              letterSpacing: "0.04em", fontFamily: LIGHT_BG_COLORS.syne,
+              letterSpacing: "0.04em", fontFamily: LIGHT_BG_COLORS.outfit,
               background: done ? LIGHT_BG_COLORS.bg3 : "rgba(33,158,188,0.10)",
               color:      done ? LIGHT_BG_COLORS.evergreenteal : LIGHT_BG_COLORS.araticcyan,
             }}>
@@ -410,10 +411,10 @@ function PricingMockup() {
   return (
     <MockupShell title="Growth Package" badge="Most Popular" badgeVariant="g">
       <div style={{ textAlign: "center", padding: "24px 12px" }}>
-        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: LIGHT_BG_COLORS.solargold, marginBottom: 14, display: "block", fontFamily: LIGHT_BG_COLORS.syne }}>
+        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: LIGHT_BG_COLORS.solargold, marginBottom: 14, display: "block", fontFamily: LIGHT_BG_COLORS.outfit }}>
           Fixed, one-time price
         </span>
-        <div style={{ fontFamily: LIGHT_BG_COLORS.syne, fontSize: "clamp(40px,5vw,56px)", fontWeight: 800, color: LIGHT_BG_COLORS.txt1, lineHeight: 1, marginBottom: 8 }}>
+        <div style={{ fontFamily: LIGHT_BG_COLORS.outfit, fontSize: "clamp(40px,5vw,56px)", fontWeight: 800, color: LIGHT_BG_COLORS.txt1, lineHeight: 1, marginBottom: 8 }}>
           $4,800
         </div>
         <div style={{ fontSize: 14, color: LIGHT_BG_COLORS.txt3, marginBottom: 20, fontFamily: LIGHT_BG_COLORS.body }}>
@@ -461,7 +462,7 @@ function KanbanMockup() {
       <div className="kanban-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10 }}>
         {cols.map((col) => (
           <div key={col.head}>
-            <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.10em", color: LIGHT_BG_COLORS.txt3, marginBottom: 8, fontFamily: LIGHT_BG_COLORS.syne }}>
+            <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.10em", color: LIGHT_BG_COLORS.txt3, marginBottom: 8, fontFamily: LIGHT_BG_COLORS.outfit }}>
               {col.head}
             </div>
             {col.cards.map((card) => (
@@ -473,7 +474,7 @@ function KanbanMockup() {
                 opacity: card.st === "todo" ? 0.65 : 1,
                 transition: "opacity 0.2s",
               }}>
-                <div style={{ fontSize: 12, fontWeight: 600, color: LIGHT_BG_COLORS.txt1, marginBottom: 3, fontFamily: LIGHT_BG_COLORS.syne }}>{card.title}</div>
+                <div style={{ fontSize: 12, fontWeight: 600, color: LIGHT_BG_COLORS.txt1, marginBottom: 3, fontFamily: LIGHT_BG_COLORS.outfit }}>{card.title}</div>
                 <div style={{ fontSize: 11, color: LIGHT_BG_COLORS.txt3, fontFamily: LIGHT_BG_COLORS.body }}>{card.sub}</div>
                 <div style={{ display: "inline-block", fontSize: 10, fontWeight: 600, padding: "2px 8px", borderRadius: 50, background: LIGHT_BG_COLORS.bg2, color: LIGHT_BG_COLORS.txt3, marginTop: 6, border: `1px solid ${LIGHT_BG_COLORS.border}`, fontFamily: LIGHT_BG_COLORS.body }}>
                   {card.time}
@@ -496,7 +497,7 @@ function FeatureRow({ eyebrow, headline, body, checks, linkText, linkHref, mocku
     const lines = raw.split(/<br\s*\/?>/i);
     return (
       <h2 style={{
-        fontFamily: LIGHT_BG_COLORS.syne,
+        fontFamily: LIGHT_BG_COLORS.outfit,
         fontSize: "clamp(32px,4.5vw,58px)",
         fontWeight: 800,
         lineHeight: 1.0,
@@ -523,6 +524,7 @@ function FeatureRow({ eyebrow, headline, body, checks, linkText, linkHref, mocku
 
   const textCol = (
     <div
+      key="text"
       ref={textRef}
       className="feat-text-col"
       style={{
@@ -531,7 +533,7 @@ function FeatureRow({ eyebrow, headline, body, checks, linkText, linkHref, mocku
         transition: "opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1)",
       }}
     >
-      <span style={{ fontFamily: LIGHT_BG_COLORS.syne, fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: theme.eyebrowClr, display: "block", marginBottom: 20 }}>
+      <span style={{ fontFamily: LIGHT_BG_COLORS.outfit, fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: theme.eyebrowClr, display: "block", marginBottom: 20 }}>
         {eyebrow}
       </span>
 
@@ -551,6 +553,7 @@ function FeatureRow({ eyebrow, headline, body, checks, linkText, linkHref, mocku
 
   const mockCol = (
     <div
+      key="mock"
       ref={mockRef}
       className="feat-mock-col"
       style={{

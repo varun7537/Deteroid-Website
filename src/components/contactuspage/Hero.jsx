@@ -1,3 +1,4 @@
+"use client";
 // HeroSection.jsx — fully redesigned with LIGHT_BG_COLORS
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
@@ -124,7 +125,7 @@ function HeroBackground() {
       <div style={{
         position: 'absolute', right: -30, top: '48%',
         transform: 'translateY(-50%)',
-        fontFamily: "'Syne', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         fontSize: 'clamp(140px,18vw,280px)',
         fontWeight: 800,
         color: LIGHT_BG_COLORS.araticcyan,
@@ -184,7 +185,7 @@ function StatCard({ num, suffix = '', label, accentColor, glowColor, delay = 0 }
 
       {/* Number */}
       <div style={{
-        fontFamily: "'Syne', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         fontSize: 'clamp(36px, 4.5vw, 52px)',
         fontWeight: 800,
         lineHeight: 1,
@@ -272,7 +273,7 @@ const HERO_STATS = [
    Global keyframes + responsive CSS
 ───────────────────────────────────────────── */
 const GLOBAL_CSS = `
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
 
   @keyframes blobDrift {
     0%,100% { transform: translate(0,0) scale(1); }
@@ -415,7 +416,7 @@ export default function Hero({ setBig = () => {} }) {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 8,
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 11,
                     fontWeight: 800,
                     letterSpacing: '0.18em',
@@ -445,7 +446,7 @@ export default function Hero({ setBig = () => {} }) {
               <h1
                 className="hero-headline"
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontWeight: 800,
                   lineHeight: 0.92,
                   letterSpacing: '-0.05em',
@@ -526,7 +527,7 @@ export default function Hero({ setBig = () => {} }) {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 9,
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 14,
                     fontWeight: 700,
                     padding: '15px 32px',
@@ -559,7 +560,7 @@ export default function Hero({ setBig = () => {} }) {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: 9,
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 14,
                     fontWeight: 600,
                     padding: '15px 32px',
@@ -666,7 +667,7 @@ export default function Hero({ setBig = () => {} }) {
                 }} />
                 {/* <div style={{ zIndex: 1 }}>
                   <div style={{
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 15, fontWeight: 800,
                     color: LIGHT_BG_COLORS.light,
                     marginBottom: 4,

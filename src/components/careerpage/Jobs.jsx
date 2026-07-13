@@ -1,10 +1,11 @@
+"use client";
 // components/careers/Jobs.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
 
 const T = {
-  FONT: "'Syne', 'DM Sans', sans-serif",
+  FONT: "'Outfit', 'DM Sans', sans-serif",
   BODY: "'DM Sans', sans-serif",
 };
 
@@ -362,8 +363,8 @@ function JobRow({ job, isActive, onClick }) {
       style={{
         width: "100%",
         textAlign: "left",
-        background: isActive ? LIGHT_BG_COLORS.bglt : hov ? LIGHT_BG_COLORS.bglt : "transparent",
-        border: `1.5px solid ${isActive ? LIGHT_BG_COLORS.border : "transparent"}`,
+        background: isActive ? LIGHT_BG_COLORS.bglt : hov ? LIGHT_BG_COLORS.bglt : "rgba(0, 0, 0, 0)",
+        border: `1.5px solid ${isActive ? LIGHT_BG_COLORS.border : "rgba(0, 0, 0, 0)"}`,
         borderRadius: 14,
         padding: "18px 20px",
         cursor: "pointer",
@@ -446,7 +447,7 @@ export function Jobs() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 

@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
@@ -147,7 +148,7 @@ export default function Hero() {
           }}
         >
           <div style={{
-            fontFamily: "'Syne',sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             fontSize: 'clamp(160px,22vw,320px)',
             fontWeight: 800,
             color: `rgba(2,48,71,0.035)`,
@@ -192,7 +193,7 @@ export default function Hero() {
             >
               <div style={{ width: 26, height: 2, background: LIGHT_BG_COLORS.araticcyan }} />
               <span style={{
-                fontFamily: "'Syne',sans-serif", fontSize: 11, fontWeight: 700,
+                fontFamily: "'Outfit', sans-serif", fontSize: 11, fontWeight: 700,
                 letterSpacing: '0.18em', textTransform: 'uppercase', color: LIGHT_BG_COLORS.araticcyan,
               }}>
                 What We Do
@@ -201,7 +202,7 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 style={{
-              fontFamily: "'Syne',sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               fontSize: 'clamp(52px,6.5vw,96px)',
               fontWeight: 800,
               lineHeight: 0.92,
@@ -277,7 +278,7 @@ export default function Hero() {
                     padding: '8px 18px', borderRadius: 999,
                     border: `1.5px solid ${LIGHT_BG_COLORS.border}`,
                     background: LIGHT_BG_COLORS.bglt,
-                    fontFamily: "'Syne',sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 11, fontWeight: 700,
                     letterSpacing: '0.07em', textTransform: 'uppercase',
                     color: LIGHT_BG_COLORS.txt1,
@@ -318,7 +319,7 @@ export default function Hero() {
                   display: 'inline-flex', alignItems: 'center', gap: 8,
                   padding: '17px 42px', borderRadius: 999,
                   background: LIGHT_BG_COLORS.araticcyan, color: LIGHT_BG_COLORS.light,
-                  fontFamily: "'Syne',sans-serif", fontSize: 14, fontWeight: 700,
+                  fontFamily: "'Outfit', sans-serif", fontSize: 14, fontWeight: 700,
                   textDecoration: 'none',
                   boxShadow: `0 10px 28px rgba(33,158,188,0.32)`,
                   transition: 'box-shadow 0.3s ease',
@@ -339,7 +340,7 @@ export default function Hero() {
                   padding: '17px 34px', borderRadius: 999,
                   border: `1.5px solid ${LIGHT_BG_COLORS.border}`,
                   color: LIGHT_BG_COLORS.dark, background: 'transparent',
-                  fontFamily: "'Syne',sans-serif", fontSize: 14, fontWeight: 600,
+                  fontFamily: "'Outfit', sans-serif", fontSize: 14, fontWeight: 600,
                   textDecoration: 'none', transition: 'all 0.3s ease',
                 }}
                 onMouseEnter={e => {
@@ -431,7 +432,7 @@ function PipelineCard() {
           padding: '8px 16px', borderRadius: 10,
           border: `1.5px solid ${LIGHT_BG_COLORS.border}`, background: LIGHT_BG_COLORS.bglt,
           boxShadow: '0 8px 24px rgba(2,48,71,0.1)',
-          fontFamily: "'Syne',sans-serif", fontSize: 11, fontWeight: 700, color: LIGHT_BG_COLORS.evergreenteal,
+          fontFamily: "'Outfit', sans-serif", fontSize: 11, fontWeight: 700, color: LIGHT_BG_COLORS.evergreenteal,
         }}
       >
         <span style={{
@@ -477,7 +478,7 @@ function PipelineCard() {
               {/* Lane title */}
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 6,
-                fontFamily: "'Syne',sans-serif", fontSize: 10, fontWeight: 700,
+                fontFamily: "'Outfit', sans-serif", fontSize: 10, fontWeight: 700,
                 letterSpacing: '0.12em', textTransform: 'uppercase',
                 color: lane.color, marginBottom: 12,
                 paddingBottom: 10, borderBottom: `1.5px solid ${LIGHT_BG_COLORS.border}`,
@@ -505,7 +506,7 @@ function PipelineCard() {
                       }}
                     >
                       <div style={{
-                        fontFamily: "'Syne',sans-serif", fontSize: 12,
+                        fontFamily: "'Outfit', sans-serif", fontSize: 12,
                         fontWeight: 700, color: LIGHT_BG_COLORS.dark, marginBottom: 2,
                       }}>
                         {step.title}
@@ -514,7 +515,7 @@ function PipelineCard() {
                       <span style={{
                         display: 'inline-block', marginTop: 6, padding: '2px 9px',
                         borderRadius: 999, fontSize: 9.5, fontWeight: 700,
-                        fontFamily: "'Syne',sans-serif", letterSpacing: '0.04em',
+                        fontFamily: "'Outfit', sans-serif", letterSpacing: '0.04em',
                         background: bg, color: clr, border: `1px solid ${bdr}`,
                       }}>
                         {step.badge}
@@ -539,7 +540,7 @@ function PipelineCard() {
           <span style={{ fontSize: 11, color: LIGHT_BG_COLORS.txt3 }}>3 pipelines · parallel execution</span>
           <div style={{
             display: 'flex', alignItems: 'center', gap: 6,
-            fontFamily: "'Syne',sans-serif", fontSize: 11, fontWeight: 700,
+            fontFamily: "'Outfit', sans-serif", fontSize: 11, fontWeight: 700,
             textTransform: 'uppercase', letterSpacing: '0.06em', color: LIGHT_BG_COLORS.evergreenteal,
           }}>
             <span style={{ width: 5, height: 5, borderRadius: '50%', background: LIGHT_BG_COLORS.evergreenteal }} />

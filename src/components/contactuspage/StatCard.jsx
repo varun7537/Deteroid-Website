@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { LIGHT_BG_COLORS } from '../../styles/tokens'
@@ -150,7 +151,7 @@ export function StatCardDark({
       {/* Value */}
       {displayValue && (
         <div style={{
-          fontFamily:    "'Syne', sans-serif",
+          fontFamily:    "'Outfit', sans-serif",
           fontSize:      scale.numSize,
           fontWeight:    800,
           lineHeight:    1,

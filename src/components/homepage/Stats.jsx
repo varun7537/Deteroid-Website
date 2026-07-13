@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { useCounter } from "../../hooks/useCounter";
 import { useReveal } from "../../hooks/useReveal";
@@ -15,7 +16,7 @@ const STAT_META = [
 ];
 
 const STATS_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
 
 /* ── Stat grid ── */
 .stats-grid {
@@ -145,7 +146,7 @@ function StatCard({ num, suffix, label, sub, delay, metaIdx }) {
 
       <span
         style={{
-          fontFamily: LIGHT_BG_COLORS.syne,
+          fontFamily: LIGHT_BG_COLORS.outfit,
           fontSize: "clamp(44px, 5vw, 72px)",
           fontWeight: 800,
           color: LIGHT_BG_COLORS.txt1,
@@ -194,7 +195,7 @@ function StatCard({ num, suffix, label, sub, delay, metaIdx }) {
 
       <div
         style={{
-          fontFamily: LIGHT_BG_COLORS.syne,
+          fontFamily: LIGHT_BG_COLORS.outfit,
           fontSize: 11,
           color: subClr,
           fontWeight: 700,

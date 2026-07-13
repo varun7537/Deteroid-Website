@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 import { LIGHT_BG_COLORS } from '../../styles/tokens'
 
@@ -40,7 +41,7 @@ export default function FloatingShapes({ ghostWord = 'CONTACT' }) {
       <div style={{
         position: 'absolute', right: -20, top: '50%',
         transform: 'translateY(-52%)',
-        fontFamily: "'Syne', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         fontSize: 'clamp(200px,22vw,340px)',
         fontWeight: 800,
         color: 'rgba(26,26,46,.03)',

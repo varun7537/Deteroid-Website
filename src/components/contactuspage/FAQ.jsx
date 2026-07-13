@@ -1,3 +1,4 @@
+"use client";
 // components/contact/FAQ.jsx
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -29,7 +30,7 @@ export default function FAQ() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .faq-section * { box-sizing: border-box; }
 
@@ -60,7 +61,7 @@ export default function FAQ() {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          font-family: 'Syne', sans-serif;
+          font-family: 'Outfit', sans-serif;
           font-size: 13px;
           font-weight: 700;
           color: ${LIGHT_BG_COLORS.araticcyan};
@@ -108,7 +109,7 @@ export default function FAQ() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
                 <span style={{
-                  fontFamily: "'Syne', sans-serif", fontSize: 11, fontWeight: 700,
+                  fontFamily: "'Outfit', sans-serif", fontSize: 11, fontWeight: 700,
                   letterSpacing: '0.22em', textTransform: 'uppercase',
                   color: LIGHT_BG_COLORS.araticcyan, display: 'block', marginBottom: 16,
                 }}>
@@ -116,7 +117,7 @@ export default function FAQ() {
                 </span>
 
                 <h2 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 'clamp(34px, 4.5vw, 58px)',
                   fontWeight: 700, lineHeight: 1,
                   letterSpacing: '-0.035em',
@@ -172,7 +173,7 @@ export default function FAQ() {
                     }}
                   >
                     <span style={{
-                      fontFamily: "'Syne', sans-serif", fontSize: 16,
+                      fontFamily: "'Outfit', sans-serif", fontSize: 16,
                       fontWeight: open === i ? 700 : 500,
                       color: open === i ? LIGHT_BG_COLORS.dark : LIGHT_BG_COLORS.txt2,
                       transition: 'color 0.2s ease',
@@ -184,7 +185,7 @@ export default function FAQ() {
                     <motion.div
                       animate={{
                         rotate: open === i ? 45 : 0,
-                        background: open === i ? LIGHT_BG_COLORS.araticcyan : 'transparent',
+                        background: open === i ? LIGHT_BG_COLORS.araticcyan : 'rgba(0,0,0,0)',
                         borderColor: open === i ? LIGHT_BG_COLORS.araticcyan : LIGHT_BG_COLORS.border,
                       }}
                       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
@@ -240,7 +241,7 @@ export default function FAQ() {
               >
                 <div>
                   <p style={{
-                    fontFamily: "'Syne', sans-serif", fontSize: 15, fontWeight: 700,
+                    fontFamily: "'Outfit', sans-serif", fontSize: 15, fontWeight: 700,
                     color: LIGHT_BG_COLORS.dark, marginBottom: 4,
                   }}>
                     Still have questions?

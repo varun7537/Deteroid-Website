@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 import { LIGHT_BG_COLORS } from '../../styles/tokens'
 
@@ -145,7 +146,7 @@ export default function CTA() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6 }}
                 style={{
-                  fontFamily: "'Syne',sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 11, fontWeight: 700,
                   letterSpacing: '0.18em', textTransform: 'uppercase',
                   color: LIGHT_BG_COLORS.solargold,
@@ -161,7 +162,7 @@ export default function CTA() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
                 style={{
-                  fontFamily: "'Syne',sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 'clamp(38px,5.8vw,74px)',
                   fontWeight: 900,
                   color: LIGHT_BG_COLORS.light,
@@ -208,7 +209,7 @@ export default function CTA() {
                   className="btn-main"
                   whileTap={{ scale: 0.97 }}
                   style={{
-                    fontFamily: "'Syne',sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 16, fontWeight: 700,
                     padding: '20px 52px', borderRadius: 999,
                     background: LIGHT_BG_COLORS.araticcyan, color: LIGHT_BG_COLORS.light,
@@ -227,7 +228,7 @@ export default function CTA() {
                   className="btn-ghost"
                   whileTap={{ scale: 0.97 }}
                   style={{
-                    fontFamily: "'Syne',sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 15, fontWeight: 600,
                     padding: '20px 38px', borderRadius: 999,
                     border: `1.5px solid rgba(183,215,226,0.28)`,
@@ -247,7 +248,7 @@ export default function CTA() {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.7 }}
                 style={{
-                  fontFamily: "'Syne',sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 11, fontWeight: 700,
                   color: 'rgba(255,183,3,0.45)',
                   marginTop: 24, letterSpacing: '0.1em', textTransform: 'uppercase',

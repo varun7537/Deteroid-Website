@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
@@ -101,7 +102,7 @@ const GLOBAL_STYLES = `
   @keyframes floatUp   { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-6px); } }
   @keyframes floatDown { 0%,100% { transform:translateY(0); } 50% { transform:translateY(6px); } }
 
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
 
   #hero * { box-sizing: border-box; }
 
@@ -177,7 +178,7 @@ export function Hero() {
             right: -40,
             top: "50%",
             transform: "translateY(-50%)",
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             fontSize: "clamp(120px,18vw,260px)",
             fontWeight: 800,
             color: `${LIGHT_BG_COLORS.araticcyan}08`,
@@ -220,7 +221,7 @@ export function Hero() {
                 <div style={{ width:32, height:2, background:LIGHT_BG_COLORS.araticcyan, borderRadius:2, flexShrink:0 }} />
                 <span
                   style={{
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 10,
                     fontWeight: 700,
                     letterSpacing: "0.22em",
@@ -235,7 +236,7 @@ export function Hero() {
               {/* H1 */}
               <h1
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: "clamp(42px,6.5vw,80px)",
                   fontWeight: 800,
                   lineHeight: 0.97,
@@ -296,7 +297,7 @@ export function Hero() {
                     padding: "0 26px",
                     background: LIGHT_BG_COLORS.araticcyan,
                     color: LIGHT_BG_COLORS.light,
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 13.5,
                     fontWeight: 700,
                     letterSpacing: "0.01em",
@@ -322,7 +323,7 @@ export function Hero() {
                     padding: "0 22px",
                     background: `${LIGHT_BG_COLORS.bgd}08`,
                     color: LIGHT_BG_COLORS.txt1,
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 13.5,
                     fontWeight: 600,
                     borderRadius: 999,
@@ -403,7 +404,7 @@ export function Hero() {
                     background: LIGHT_BG_COLORS.bglt,
                     border: `1px solid ${LIGHT_BG_COLORS.border}`,
                     boxShadow: `0 4px 20px ${LIGHT_BG_COLORS.araticcyan}22`,
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 12,
                     fontWeight: 600,
                     color: LIGHT_BG_COLORS.evergreenteal,
@@ -498,7 +499,7 @@ export function Hero() {
                     background: LIGHT_BG_COLORS.bglt,
                     border: `1px solid ${LIGHT_BG_COLORS.border}`,
                     boxShadow: `0 4px 20px ${LIGHT_BG_COLORS.emberorange}22`,
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 12,
                     fontWeight: 600,
                     color: LIGHT_BG_COLORS.emberorange,

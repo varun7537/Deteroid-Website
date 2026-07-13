@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { LIGHT_BG_COLORS } from "../styles/tokens";
 
 const FOOTER_COLS = [
@@ -59,7 +60,7 @@ const SOC_ICONS = [
 ];
 
 const FOOTER_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap');
 
 .footer-root {
   background: ${LIGHT_BG_COLORS.bgd};
@@ -211,7 +212,7 @@ function Footer() {
           {/* ── Quick nav row ── */}
           <nav className="footer-nav-row" aria-label="Footer navigation">
             {FOOTER_NAV.map(({ label, to }) => (
-              <Link key={label} to={to} className="footer-nav-link">
+              <Link key={label} href={to} className="footer-nav-link">
                 {label}
               </Link>
             ))}
@@ -223,9 +224,9 @@ function Footer() {
             {/* Brand column */}
             <div className="footer-brand">
               <Link
-                to="/"
+                href="/"
                 style={{
-                  fontFamily: LIGHT_BG_COLORS.syne,
+                  fontFamily: LIGHT_BG_COLORS.outfit,
                   fontSize: 22, fontWeight: 800,
                   color: LIGHT_BG_COLORS.bglt,
                   letterSpacing: "-0.03em",
@@ -243,7 +244,7 @@ function Footer() {
               {/* Trust micro-signal */}
               <div style={{ display:"flex", alignItems:"center", gap:7, marginTop:20 }}>
                 <span style={{ width:6, height:6, borderRadius:"50%", background:LIGHT_BG_COLORS.evergreenteal, display:"inline-block" }} />
-                <span style={{ fontFamily:LIGHT_BG_COLORS.syne, fontSize:10, fontWeight:700, color:LIGHT_BG_COLORS.evergreenteal, letterSpacing:"0.08em", textTransform:"uppercase" }}>
+                <span style={{ fontFamily:LIGHT_BG_COLORS.outfit, fontSize:10, fontWeight:700, color:LIGHT_BG_COLORS.evergreenteal, letterSpacing:"0.08em", textTransform:"uppercase" }}>
                   0 security breaches
                 </span>
               </div>
@@ -253,14 +254,14 @@ function Footer() {
             {FOOTER_COLS.map((col) => (
               <div key={col.title}>
                 <h4 style={{
-                  fontFamily: LIGHT_BG_COLORS.syne, fontSize: 11, fontWeight: 700,
+                  fontFamily: LIGHT_BG_COLORS.outfit, fontSize: 11, fontWeight: 700,
                   textTransform: "uppercase", letterSpacing: "0.15em",
                   color: LIGHT_BG_COLORS.bglt, marginBottom: 22,
                 }}>
                   {col.title}
                 </h4>
                 {col.links.map(({ label, to }) => (
-                  <Link key={label} to={to} className="footer-link">
+                  <Link key={label} href={to} className="footer-link">
                     {label}
                   </Link>
                 ))}
@@ -270,7 +271,7 @@ function Footer() {
             {/* Contact column */}
             <div>
               <h4 style={{
-                fontFamily: LIGHT_BG_COLORS.syne, fontSize: 11, fontWeight: 700,
+                fontFamily: LIGHT_BG_COLORS.outfit, fontSize: 11, fontWeight: 700,
                 textTransform: "uppercase", letterSpacing: "0.15em",
                 color: LIGHT_BG_COLORS.bglt, marginBottom: 22,
               }}>
@@ -287,7 +288,7 @@ function Footer() {
               <div style={{ display:"flex", gap:10, marginTop:4 }}>
                 {SOC_ICONS.map((s) => <SocIcon key={s.title} {...s} />)}
               </div>
-              <p style={{ fontFamily:LIGHT_BG_COLORS.syne, fontSize:10, fontWeight:600, color:"rgba(183,215,226,0.38)", marginTop:16, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+              <p style={{ fontFamily:LIGHT_BG_COLORS.outfit, fontSize:10, fontWeight:600, color:"rgba(183,215,226,0.38)", marginTop:16, letterSpacing:"0.06em", textTransform:"uppercase" }}>
                 Responds within 2 hours
               </p>
             </div>

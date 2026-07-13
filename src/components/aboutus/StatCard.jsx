@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useCounter } from "../../hooks/useCounter";
 import { FONT, LIGHT_BG_COLORS } from "../../styles/tokens";

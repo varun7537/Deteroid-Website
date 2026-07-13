@@ -1,5 +1,7 @@
+"use client";
 import React, { useEffect, useState, useCallback } from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FONT, LIGHT_BG_COLORS } from "../styles/tokens";
 
 const NAV_LINKS = [
@@ -127,6 +129,7 @@ const MOBILE_MENU_CSS = `
 `;
 
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled,   setScrolled]   = useState(false);
   const [menuOpen,   setMenuOpen]   = useState(false);
 
@@ -178,8 +181,8 @@ export function Navbar() {
           style={{ maxWidth: 1280, margin: "0 auto", padding: "0 56px" }}
         >
           {/* Logo */}
-          <NavLink
-            to="/"
+          <Link
+            href="/"
             onClick={closeMenu}
             style={{
               fontFamily:     FONT,
@@ -205,54 +208,57 @@ export function Navbar() {
                 boxShadow:    `0 0 12px ${LIGHT_BG_COLORS.accent}`,
               }}
             />
-          </NavLink>
+          </Link>
 
           {/* Desktop Nav Links */}
           <div className="nav-desktop-links hidden md:flex items-center gap-9">
-            {NAV_LINKS.map(({ label, to }) => (
-              <NavLink
-                key={label}
-                to={to}
-                end={to === "/"}
-                className="relative group transition-all duration-300"
-                style={desktopLinkStyle}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = LIGHT_BG_COLORS.araticcyan;
-                }}
-                onMouseLeave={(e) => {
-                  // Re-derive active state on mouse-leave
-                  const isActive = e.currentTarget.getAttribute("aria-current") === "page";
-                  e.currentTarget.style.color = isActive
-                    ? LIGHT_BG_COLORS.araticcyan
-                    : LIGHT_BG_COLORS.txt2;
-                }}
-              >
-                {({ isActive }) => (
-                  <>
-                    {label}
-                    {/* Underline — always rendered; width driven by active or group-hover */}
-                    <span
-                      style={{
-                        position:   "absolute",
-                        bottom:     -5,
-                        left:       0,
-                        width:      isActive ? "100%" : 0,
-                        height:     2,
-                        borderRadius: 10,
-                        background: LIGHT_BG_COLORS.araticcyan,
-                        transition: "width 0.3s ease",
-                      }}
-                      className={!isActive ? "group-hover:w-full" : ""}
-                    />
-                  </>
-                )}
-              </NavLink>
-            ))}
+            {NAV_LINKS.map(({ label, to }) => {
+              const isActive = to === "/" ? pathname === "/" : pathname === to;
+              return (
+                <Link
+                  key={label}
+                  href={to}
+                  className="relative group transition-all duration-300"
+                  style={{
+                    fontFamily: FONT,
+                    fontSize: 14,
+                    fontWeight: 600,
+                    color: isActive ? LIGHT_BG_COLORS.araticcyan : LIGHT_BG_COLORS.txt2,
+                    textDecoration: "none",
+                    position: "relative",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = LIGHT_BG_COLORS.araticcyan;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = isActive
+                      ? LIGHT_BG_COLORS.araticcyan
+                      : LIGHT_BG_COLORS.txt2;
+                  }}
+                >
+                  {label}
+                  {/* Underline — always rendered; width driven by active or group-hover */}
+                  <span
+                    style={{
+                      position:   "absolute",
+                      bottom:     -5,
+                      left:       0,
+                      width:      isActive ? "100%" : 0,
+                      height:     2,
+                      borderRadius: 10,
+                      background: LIGHT_BG_COLORS.araticcyan,
+                      transition: "width 0.3s ease",
+                    }}
+                    className={!isActive ? "group-hover:w-full" : ""}
+                  />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Desktop CTA */}
-          <NavLink
-            to="/contact"
+          <Link
+            href="/contact"
             className="nav-desktop-cta"
             style={{
               fontFamily:     FONT,
@@ -286,7 +292,7 @@ export function Navbar() {
           >
             Get Started
             <span style={{ fontSize: 14 }}>→</span>
-          </NavLink>
+          </Link>
 
           {/* Mobile Hamburger */}
           <button
@@ -304,26 +310,26 @@ export function Navbar() {
 
       {/* ── Mobile Full-screen Menu ── */}
       <div className={`nav-mobile-menu${menuOpen ? " open" : ""}`} role="dialog" aria-modal="true">
-        {NAV_LINKS.map(({ label, to }) => (
-          <NavLink
-            key={label}
-            to={to}
-            end={to === "/"}
-            className={({ isActive }) =>
-              `nav-mobile-link${isActive ? " active" : ""}`
-            }
-            onClick={closeMenu}
-          >
-            {label}
-          </NavLink>
-        ))}
-        <NavLink
-          to="/contact"
+        {NAV_LINKS.map(({ label, to }) => {
+          const isActive = to === "/" ? pathname === "/" : pathname === to;
+          return (
+            <Link
+              key={label}
+              href={to}
+              className={`nav-mobile-link${isActive ? " active" : ""}`}
+              onClick={closeMenu}
+            >
+              {label}
+            </Link>
+          );
+        })}
+        <Link
+          href="/contact"
           className="nav-mobile-cta"
           onClick={closeMenu}
         >
           Get Started <span>→</span>
-        </NavLink>
+        </Link>
       </div>
     </>
   );

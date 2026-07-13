@@ -1,3 +1,4 @@
+"use client";
 // components/contact/Channels.jsx
 import { motion } from 'framer-motion'
 import { LIGHT_BG_COLORS } from '../../styles/tokens'
@@ -53,7 +54,7 @@ export default function Channels() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .ch-section * { box-sizing: border-box; }
 
@@ -129,7 +130,7 @@ export default function Channels() {
             style={{ marginBottom: 72, maxWidth: 600 }}
           >
             <span style={{
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               fontSize: 11,
               fontWeight: 700,
               letterSpacing: '0.22em',
@@ -142,7 +143,7 @@ export default function Channels() {
             </span>
 
             <h2 style={{
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               fontSize: 'clamp(34px, 4.5vw, 58px)',
               fontWeight: 700,
               lineHeight: 1,
@@ -208,7 +209,7 @@ export default function Channels() {
                 </div>
 
                 <h3 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 22,
                   fontWeight: 700,
                   color: LIGHT_BG_COLORS.dark,
@@ -230,7 +231,7 @@ export default function Channels() {
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                   <span style={{
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Outfit', sans-serif",
                     fontSize: 13,
                     fontWeight: 700,
                     color: ch.color,

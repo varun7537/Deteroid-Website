@@ -1,3 +1,4 @@
+"use client";
 import { useReveal } from "../../hooks/useReveal";
 import { useState } from "react";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
@@ -195,7 +196,7 @@ function TrustCard({ accent, title, body, icon }) {
 
       <h3
         style={{
-          fontFamily: LIGHT_BG_COLORS.syne,
+          fontFamily: LIGHT_BG_COLORS.outfit,
           fontSize: 17, fontWeight: 700,
           color: LIGHT_BG_COLORS.txt1,
           lineHeight: 1.3, marginBottom: 10,
@@ -282,7 +283,7 @@ function Trust() {
         >
           <span
             style={{
-              fontFamily: LIGHT_BG_COLORS.syne,
+              fontFamily: LIGHT_BG_COLORS.outfit,
               fontSize: 11, fontWeight: 700,
               letterSpacing: "0.18em", textTransform: "uppercase",
               color: LIGHT_BG_COLORS.emberorange,
@@ -294,7 +295,7 @@ function Trust() {
 
           <h2
             style={{
-              fontFamily: LIGHT_BG_COLORS.syne,
+              fontFamily: LIGHT_BG_COLORS.outfit,
               fontSize: "clamp(32px, 4.5vw, 60px)",
               fontWeight: 700, lineHeight: 1,
               letterSpacing: "-0.03em",

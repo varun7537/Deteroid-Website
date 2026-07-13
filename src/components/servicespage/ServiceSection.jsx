@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 import { LIGHT_BG_COLORS } from '../../styles/tokens'
 
@@ -140,7 +141,7 @@ function PillarStrip() {
             borderRadius:  999,
             border:        `1.5px solid ${LIGHT_BG_COLORS.border}`,
             background:    LIGHT_BG_COLORS.bglt,
-            fontFamily:    "'Syne',sans-serif",
+            fontFamily:    "'Outfit', sans-serif",
             fontSize:      11,
             fontWeight:    700,
             letterSpacing: '0.07em',
@@ -229,7 +230,7 @@ function ServiceBlock({ svc, index }) {
               textTransform: 'uppercase',
               color:         svc.accent,
               marginBottom:  4,
-              fontFamily:    "'Syne',sans-serif",
+              fontFamily:    "'Outfit', sans-serif",
             }}>
               {svc.pillar}
             </div>
@@ -238,7 +239,7 @@ function ServiceBlock({ svc, index }) {
               fontSize:   21,
               fontWeight: 700,
               color:      LIGHT_BG_COLORS.dark,
-              fontFamily: "'Syne',sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               lineHeight: 1.2,
             }}>
               {svc.title}
@@ -248,7 +249,7 @@ function ServiceBlock({ svc, index }) {
 
         {/* Count + arrow */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
-          <span style={{ fontSize: 13, color: LIGHT_BG_COLORS.txt3, fontFamily: "'Syne',sans-serif" }}>
+          <span style={{ fontSize: 13, color: LIGHT_BG_COLORS.txt3, fontFamily: "'Outfit', sans-serif" }}>
             {svc.count}
           </span>
           <div
@@ -305,7 +306,7 @@ function ServiceBlock({ svc, index }) {
               color:         LIGHT_BG_COLORS.txt3,
               fontWeight:    700,
               marginBottom:  8,
-              fontFamily:    "'Syne',sans-serif",
+              fontFamily:    "'Outfit', sans-serif",
               letterSpacing: '0.08em',
             }}>
               {item.num}
@@ -316,7 +317,7 @@ function ServiceBlock({ svc, index }) {
               fontSize:     15,
               fontWeight:   700,
               color:        LIGHT_BG_COLORS.txt1,
-              fontFamily:   "'Syne',sans-serif",
+              fontFamily:   "'Outfit', sans-serif",
               marginBottom: 10,
               lineHeight:   1.3,
             }}>
@@ -344,7 +345,7 @@ function ServiceBlock({ svc, index }) {
               background:    svc.badgeBg,
               color:         svc.accent,
               border:        `1px solid ${svc.badgeBorder}`,
-              fontFamily:    "'Syne',sans-serif",
+              fontFamily:    "'Outfit', sans-serif",
               letterSpacing: '0.04em',
               whiteSpace:    'nowrap',
             }}>
@@ -512,7 +513,7 @@ export default function ServiceSection() {
             <div>
               {/* Eyebrow — Aratic Cyan */}
               <span style={{
-                fontFamily:    "'Syne',sans-serif",
+                fontFamily:    "'Outfit', sans-serif",
                 fontSize:      11,
                 fontWeight:    700,
                 letterSpacing: '0.18em',
@@ -526,7 +527,7 @@ export default function ServiceSection() {
 
               {/* Heading: base dark + Evergreen Teal second line */}
               <h2 style={{
-                fontFamily:    "'Syne',sans-serif",
+                fontFamily:    "'Outfit', sans-serif",
                 fontSize:      'clamp(30px,4vw,54px)',
                 fontWeight:    800,
                 lineHeight:    0.97,

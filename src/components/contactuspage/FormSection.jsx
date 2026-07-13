@@ -1,3 +1,4 @@
+"use client";
 // components/contact/FormSection.jsx
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
@@ -5,7 +6,7 @@ import ContactForm from './ContactForm'
 import { LIGHT_BG_COLORS } from '../../styles/tokens'
 
 const FONT = {
-  display: "'Syne', sans-serif",
+  display: "'Outfit', sans-serif",
   body:    "'DM Sans', sans-serif",
 }
 
@@ -71,7 +72,7 @@ export default function FormSection({ setBig }) {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .fs-section * { box-sizing: border-box; }
 

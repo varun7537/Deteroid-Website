@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Reveal } from "./Reveal";
 import { FONT, LIGHT_BG_COLORS } from "../../styles/tokens";

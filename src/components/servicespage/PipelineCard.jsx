@@ -1,3 +1,4 @@
+"use client";
 function PipelineCard() {
   return (
     <div
@@ -10,7 +11,7 @@ function PipelineCard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        fontFamily: "'Syne', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         color: '#7A7A9A',
         fontSize: 14,
       }}

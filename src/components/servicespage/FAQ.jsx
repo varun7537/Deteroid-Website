@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { motion } from 'framer-motion'
@@ -167,7 +168,7 @@ export default function FAQ() {
 
               {/* Eyebrow — Aratic araticcyan */}
               <span style={{
-                fontFamily: "'Syne',sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 fontSize: 11, fontWeight: 700,
                 letterSpacing: '0.18em', textTransform: 'uppercase',
                 color: LIGHT_BG_COLORS.araticcyan, marginBottom: 18, display: 'block',
@@ -177,7 +178,7 @@ export default function FAQ() {
 
               {/* Heading */}
               <h2 style={{
-                fontFamily: "'Syne',sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 fontSize: 'clamp(32px,4vw,54px)',
                 fontWeight: 800, lineHeight: 1.04,
                 color: LIGHT_BG_COLORS.dark, marginBottom: 20,
@@ -203,7 +204,7 @@ export default function FAQ() {
                     href={link.href}
                     style={{
                       display: 'inline-flex', alignItems: 'center', gap: 8,
-                      fontFamily: "'Syne',sans-serif",
+                      fontFamily: "'Outfit', sans-serif",
                       fontSize: 13, fontWeight: 700,
                       textDecoration: 'none',
                       letterSpacing: '0.04em', textTransform: 'uppercase',

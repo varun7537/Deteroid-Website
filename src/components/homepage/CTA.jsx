@@ -1,9 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import { useReveal } from "../../hooks/useReveal";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
 
 const CTA_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap');
 
 @keyframes cta-pulse-ring {
   0%   { transform: scale(0.92); opacity: 0.6; }
@@ -54,7 +55,7 @@ const CTA_CSS = `
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 700;
   padding: 20px 52px;
@@ -184,7 +185,7 @@ function CTA() {
             }} />
 
             <span style={{
-              fontFamily: LIGHT_BG_COLORS.syne, fontSize: 11, fontWeight: 700,
+              fontFamily: LIGHT_BG_COLORS.outfit, fontSize: 11, fontWeight: 700,
               letterSpacing: "0.18em", textTransform: "uppercase",
               color: LIGHT_BG_COLORS.emberorange, display: "block", marginBottom: 20,
               position: "relative", zIndex: 1,
@@ -193,7 +194,7 @@ function CTA() {
             </span>
 
             <h2 style={{
-              fontFamily: LIGHT_BG_COLORS.syne,
+              fontFamily: LIGHT_BG_COLORS.outfit,
               fontSize: "clamp(36px, 5vw, 68px)",
               fontWeight: 900,
               color: LIGHT_BG_COLORS.bglt,
@@ -242,7 +243,7 @@ function CTA() {
             </div>
 
             <p style={{
-              fontFamily: LIGHT_BG_COLORS.syne, fontSize: 11,
+              fontFamily: LIGHT_BG_COLORS.outfit, fontSize: 11,
               color: "rgba(183,215,226,0.45)",
               marginTop: 18, letterSpacing: "0.06em", textTransform: "uppercase",
               position: "relative", zIndex: 1,

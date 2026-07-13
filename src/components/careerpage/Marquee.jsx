@@ -1,3 +1,4 @@
+"use client";
 // components/careers/Marquee.jsx
 import React from "react";
 import { T } from "../../styles/tokens";
@@ -16,7 +17,7 @@ export function Marquee() {
         {doubled.map(([label, hi], i) => (
           <span key={i} style={{
             display: "inline-flex", alignItems: "center", gap: 14,
-            padding: "0 48px", fontFamily: T.syne, fontSize: 12, fontWeight: 700,
+            padding: "0 48px", fontFamily: T.outfit, fontSize: 12, fontWeight: 700,
             letterSpacing: ".14em", textTransform: "uppercase",
             color: hi ? "rgba(255,255,255,.65)" : "rgba(255,255,255,.3)",
           }}>

@@ -1,7 +1,8 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
 
-const FONT = "'Syne', 'DM Sans', sans-serif";
+const FONT = "'Outfit', 'DM Sans', sans-serif";
 
 /* ─── StatCard ───────────────────────────────────────── */
 function StatCard({ num, label, sub, accent, bg, textColor, tall, locTag, bordered }) {
@@ -123,7 +124,7 @@ export function Hero() {
     <>
       {/* Google Font import */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

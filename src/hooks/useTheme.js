@@ -1,6 +1,6 @@
 // theme.js  (create this file once, import everywhere)
 export const T = {
-  syne:     "'Syne', sans-serif",
+  outfit:     "'Outfit', sans-serif",
   bg:       "#F8F5F0",
   surface:  "#FFFFFF",
   ink:      "#1A1A2E",

@@ -1,3 +1,4 @@
+"use client";
 import React from "react"
 
 const items = [
@@ -45,7 +46,7 @@ export default function Marquee() {
               alignItems: "center",
               gap: 14,
               padding: "0 48px",
-              fontFamily: "'Syne',sans-serif",
+              fontFamily: "'Outfit', sans-serif",
               fontSize: 12,
               fontWeight: 700,
               letterSpacing: "0.14em",

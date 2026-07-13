@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { LIGHT_BG_COLORS } from '../../styles/tokens'
@@ -100,7 +101,7 @@ function CountStat({ stat }) {
 
       {/* Value */}
       <div style={{
-        fontFamily: "'Syne', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         fontSize: 46, fontWeight: 800, lineHeight: 1,
         marginBottom: 10, color: stat.color,
         letterSpacing: '-0.045em',
@@ -157,7 +158,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
       >
         {/* Number */}
         <span style={{
-          fontFamily: "'Syne', sans-serif",
+          fontFamily: "'Outfit', sans-serif",
           fontSize: 10, fontWeight: 800,
           color: LIGHT_BG_COLORS.araticcyan,
           width: 28, flexShrink: 0,
@@ -171,7 +172,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
         {/* Title */}
         <div style={{ flex: 1 }}>
           <h3 style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Outfit', sans-serif",
             fontSize: 18, fontWeight: 700,
             color: isOpen ? LIGHT_BG_COLORS.araticcyan : 'rgba(228,241,248,0.92)',
             lineHeight: 1.4, letterSpacing: '-0.025em',
@@ -384,7 +385,7 @@ export default function Why() {
               <span
                 className="why-eyebrow"
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 11, fontWeight: 800,
                   letterSpacing: '0.2em', textTransform: 'uppercase',
                   color: LIGHT_BG_COLORS.araticcyan,
@@ -401,7 +402,7 @@ export default function Why() {
               <h2
                 className="why-heading"
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 'clamp(36px, 4.4vw, 58px)',
                   fontWeight: 800, lineHeight: 0.97,
                   letterSpacing: '-0.05em',
@@ -455,7 +456,7 @@ export default function Why() {
                   background: `linear-gradient(90deg, ${LIGHT_BG_COLORS.araticcyan}, transparent)`,
                 }} />
                 <span style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 10, fontWeight: 800,
                   letterSpacing: '0.18em', textTransform: 'uppercase',
                   color: 'rgba(183,215,226,0.4)',

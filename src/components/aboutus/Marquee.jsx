@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const ITEMS = [
@@ -40,7 +41,7 @@ export function Marquee() {
             key={i}
             className="flex items-center gap-3 text-sm font-bold uppercase tracking-widest"
             style={{
-              fontFamily: "Syne, sans-serif",
+              fontFamily: "Outfit, sans-serif",
               color: isGood
                 ? "rgba(255,255,255,0.65)"
                 : "rgba(255,255,255,0.35)",

@@ -1,7 +1,8 @@
+"use client";
 function GlobalStyles() {
   return (
     <style>{`
-      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html  { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
       body  { font-family: 'DM Sans', sans-serif; background: #F8F5F0; color: #1A1A2E; overflow-x: hidden; cursor: none; }

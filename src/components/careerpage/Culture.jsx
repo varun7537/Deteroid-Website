@@ -1,3 +1,4 @@
+"use client";
 // components/careers/Culture.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
@@ -9,7 +10,7 @@ import { LIGHT_BG_COLORS } from "../../styles/tokens";
 gsap.registerPlugin(ScrollTrigger);
 
 const T = {
-  FONT: "'Syne', 'DM Sans', sans-serif",
+  FONT: "'Outfit', 'DM Sans', sans-serif",
   BODY_FONT: "'DM Sans', sans-serif",
 };
 
@@ -167,7 +168,7 @@ export function Culture() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .culture-section *,
         .culture-section *::before,
@@ -234,7 +235,7 @@ export function Culture() {
         }
 
         .culture-heading {
-          font-family: 'Syne', sans-serif;
+          font-family: 'Outfit', sans-serif;
           font-size: clamp(36px, 4vw, 54px);
           font-weight: 800;
           line-height: 0.96;
@@ -255,7 +256,7 @@ export function Culture() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          font-family: 'Syne', sans-serif;
+          font-family: 'Outfit', sans-serif;
           font-size: 13px;
           font-weight: 700;
           padding: 13px 26px;
@@ -322,7 +323,7 @@ export function Culture() {
         .card-content { flex: 1; }
 
         .card-title {
-          font-family: 'Syne', sans-serif;
+          font-family: 'Outfit', sans-serif;
           font-size: 15px;
           font-weight: 700;
           color: ${LIGHT_BG_COLORS.dark};

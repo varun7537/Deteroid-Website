@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { T } from "../../hooks/useTheme";
 import { useReveal } from "../../hooks/useReveal";
@@ -107,7 +108,7 @@ function GlobalStyles() {
       }
 
       .process-title {
-        font-family: ${T.syne || "Syne, sans-serif"};
+        font-family: ${T.outfit || "Outfit, sans-serif"};
         font-size: clamp(32px, 4.5vw, 60px);
         font-weight: 700;
         line-height: 1.05;
@@ -134,7 +135,7 @@ function GlobalStyles() {
       }
 
       .step-number {
-        font-family: ${T.syne || "Syne, sans-serif"};
+        font-family: ${T.outfit || "Outfit, sans-serif"};
         font-size: 88px;
         font-weight: 800;
         line-height: 1;
@@ -154,7 +155,7 @@ function GlobalStyles() {
       }
 
       .step-eyebrow {
-        font-family: ${T.syne || "Syne, sans-serif"};
+        font-family: ${T.outfit || "Outfit, sans-serif"};
         font-size: 11px;
         font-weight: 700;
         text-transform: uppercase;
@@ -165,7 +166,7 @@ function GlobalStyles() {
       }
 
       .step-title {
-        font-family: ${T.syne || "Syne, sans-serif"};
+        font-family: ${T.outfit || "Outfit, sans-serif"};
         font-size: 22px;
         font-weight: 700;
         color: #023047;
@@ -196,7 +197,7 @@ function GlobalStyles() {
         background: #E6F6EF;
         color: #408A71;
         border: 1px solid #B7D7E2;
-        font-family: ${T.syne || "Syne, sans-serif"};
+        font-family: ${T.outfit || "Outfit, sans-serif"};
         letter-spacing: 0.04em;
         transition: background 0.3s, color 0.3s;
       }
@@ -240,7 +241,7 @@ function GlobalStyles() {
       }
 
       .eyebrow-label {
-        font-family: ${T.syne || "Syne, sans-serif"};
+        font-family: ${T.outfit || "Outfit, sans-serif"};
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 0.18em;
@@ -388,7 +389,7 @@ function Process() {
                 borderRadius: 50,
                 background: "#FB8500",
                 color: "#FFFFFF",
-                fontFamily: T.syne || "Syne, sans-serif",
+                fontFamily: T.outfit || "Outfit, sans-serif",
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: "0.06em",
@@ -420,7 +421,7 @@ function Process() {
                 borderRadius: 50,
                 background: "transparent",
                 color: "#023047",
-                fontFamily: T.syne || "Syne, sans-serif",
+                fontFamily: T.outfit || "Outfit, sans-serif",
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: "0.06em",

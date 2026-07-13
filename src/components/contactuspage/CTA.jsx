@@ -1,3 +1,4 @@
+"use client";
 // components/contact/CTA.jsx
 import { motion } from 'framer-motion'
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
@@ -6,7 +7,7 @@ export default function CTA({ setBig }) {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap');
 
         .cta-contact * { box-sizing: border-box; }
 
@@ -40,7 +41,7 @@ export default function CTA({ setBig }) {
         }
 
         .cta-contact-btn-primary {
-          font-family: 'Syne', sans-serif;
+          font-family: 'Outfit', sans-serif;
           font-size: 15px;
           font-weight: 700;
           padding: 20px 52px;
@@ -64,7 +65,7 @@ export default function CTA({ setBig }) {
         }
 
         .cta-contact-btn-secondary {
-          font-family: 'Syne', sans-serif;
+          font-family: 'Outfit', sans-serif;
           font-size: 15px;
           font-weight: 600;
           padding: 20px 36px;
@@ -178,7 +179,7 @@ export default function CTA({ setBig }) {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1, duration: 0.6 }}
                 style={{
-                  fontFamily: "'Syne', sans-serif", fontSize: 11, fontWeight: 700,
+                  fontFamily: "'Outfit', sans-serif", fontSize: 11, fontWeight: 700,
                   letterSpacing: '0.22em', textTransform: 'uppercase',
                   color: LIGHT_BG_COLORS.araticcyan, display: 'block', marginBottom: 24,
                 }}
@@ -192,7 +193,7 @@ export default function CTA({ setBig }) {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                 style={{
-                  fontFamily: "'Syne', sans-serif",
+                  fontFamily: "'Outfit', sans-serif",
                   fontSize: 'clamp(38px, 5.5vw, 72px)',
                   fontWeight: 800, color: LIGHT_BG_COLORS.bg1,
                   letterSpacing: '-0.04em', lineHeight: 0.95, marginBottom: 22,
@@ -252,7 +253,7 @@ export default function CTA({ setBig }) {
                 viewport={{ once: true }}
                 transition={{ delay: 0.55 }}
                 style={{
-                  fontFamily: "'Syne', sans-serif", fontSize: 11, fontWeight: 700,
+                  fontFamily: "'Outfit', sans-serif", fontSize: 11, fontWeight: 700,
                   color: `${LIGHT_BG_COLORS.txt3}88`, marginTop: 24,
                   letterSpacing: '0.12em', textTransform: 'uppercase',
                 }}

@@ -1,14 +1,15 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { LIGHT_BG_COLORS } from "../../styles/tokens";
 
-const FONT = "'Syne', 'DM Sans', sans-serif";
+const FONT = "'Outfit', 'DM Sans', sans-serif";
 
 export function CTA() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap');
 
         #cta * { box-sizing: border-box; }
 
